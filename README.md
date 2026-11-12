@@ -1,75 +1,175 @@
-# Employee Management System (Full Stack)
+Employee Management System
 
-A full-stack **Employee Management System** built with **Spring Boot (Backend)** and **React (Frontend)**.  
-The application supports **JWT-based authentication**, **role-based access control**, and complete **CRUD operations** for employees.
+A full-stack Employee Management System developed to simplify employee administration, attendance tracking, and leave management. The application provides a centralized platform for managing employee information, maintaining attendance records, handling leave-related activities, and generating monthly attendance reports.
 
----
+🚀 Features
 
-## 🚀 Features
+👥 Employee Management
 
-### 🔐 Authentication & Authorization
-- JWT-based authentication
-- Role-based access control:
-  - **ADMIN** → Full access (Create, Update, Delete)
-  - **USER** → Read-only access
+Employee registration and information management.
 
-### 👨‍💼 Employee Management
-- Add new employees (Admin only)
-- Update employee details (Admin only)
-- Delete employees (Admin only)
-- View employee list (Admin & User)
-- Pagination, sorting, and search
+View and manage employee records.
 
-### 🧑‍💻 Frontend
-- React + Vite
-- Axios with JWT interceptor
-- Protected routes
-- Admin-only UI actions
-- Proper error handling (409 conflict, validation errors)
+Search, sort, and paginate employee details.
 
-### 🛠 Backend
-- Spring Boot
-- Spring Security
-- JWT Authentication Filter
-- JPA + Hibernate
-- MySQL Database
-- Validation with Hibernate Validator
+Role-based access for different users.
 
----
+📅 Attendance Management
 
-## 🧰 Tech Stack
+Record and track employee attendance.
 
-### Backend
-- Java 17
-- Spring Boot
-- Spring Security
-- JWT 
-- JPA / Hibernate
-- MySQL
-- Maven
+Maintain daily attendance records.
 
-### Frontend
-- React
-- Vite
-- Axios
-- React Router
+Retrieve attendance information for reporting.
 
+Generate monthly attendance summaries.
 
----
+📝 Leave Management
 
-## ⚙️ Setup Instructions
+Manage employee leave information.
 
-### 1️⃣ Backend Setup (Spring Boot)
+Maintain leave records in the database.
 
-```bash
-cd employee-backend
-mvn clean install
-mvn spring-boot:run
-```
+Organize leave-related information for easier tracking.
 
-### 2️⃣ Frontend Setup (React)
+📊 Monthly Reports
 
-```bash
-cd ems-frontend
-npm install
-npm run dev
+Generate monthly attendance reports.
+
+Retrieve attendance information from the MySQL database.
+
+Reduce manual effort involved in attendance reporting.
+
+🔐 Authentication and Authorization
+
+JWT-based authentication.
+
+Secure login and protected routes.
+
+Role-based access control:
+
+ADMIN: Access to administrative operations.
+
+USER: Read-only access to permitted information.
+
+🛠️ Technology Stack
+
+Technology
+
+Purpose
+
+Java 17
+
+Backend programming
+
+Spring Boot
+
+Backend application development
+
+Spring Security
+
+Authentication and authorization
+
+JWT
+
+Secure token-based authentication
+
+Spring Data JPA
+
+Database interaction
+
+Hibernate
+
+ORM
+
+MySQL
+
+Relational database
+
+React.js
+
+Frontend development
+
+Vite
+
+Frontend build tool
+
+Axios
+
+API communication
+
+React Router
+
+Frontend navigation
+
+CSS / Bootstrap
+
+User interface styling
+
+Maven
+
+Backend dependency management
+
+🏗️ System Architecture
+
+The application follows a client-server architecture.
+
+          React Frontend
+                |
+                | HTTP Requests (Axios)
+                |
+          Spring Boot Backend
+                |
+        Spring Security + JWT
+                |
+          REST API Controllers
+                |
+          Service Layer
+                |
+       Spring Data JPA / Hibernate
+                |
+             MySQL
+
+🔄 Application Workflow
+
+User Login: The user enters login credentials through the React application.
+
+Authentication: Spring Security validates the credentials and JWT is used for authenticated requests.
+
+Employee Management: Authorized users access employee information and management operations.
+
+Attendance Tracking: Employee attendance records are maintained in the database.
+
+Leave Management: Employee leave information is stored and managed.
+
+Report Generation: Attendance data is retrieved to generate monthly reports.
+
+Dashboard: The frontend displays the relevant employee and attendance information.
+
+🗄️ Database
+
+Database: MySQL
+
+The database is used to maintain employee information, user credentials, attendance records, and leave-related information.
+
+The following are conceptual entities for the application:
+
+Entity
+
+Purpose
+
+Employee
+
+Stores employee details
+
+User
+
+Stores login and role information
+
+Attendance
+
+Maintains employee attendance records
+
+Leave
+
+Maintains employee leave records
