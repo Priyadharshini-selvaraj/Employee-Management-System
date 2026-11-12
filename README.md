@@ -43,7 +43,7 @@ The application supports **JWT-based authentication**, **role-based access contr
 - Java 17
 - Spring Boot
 - Spring Security
-- JWT (jjwt)
+- JWT 
 - JPA / Hibernate
 - MySQL
 - Maven
@@ -53,7 +53,7 @@ The application supports **JWT-based authentication**, **role-based access contr
 - Vite
 - Axios
 - React Router
-- Bootstrap
+
 
 ---
 
